@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApp2
 {
-    partial class Form1
+    partial class MTR
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace WindowsFormsApp2
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MTR));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -82,7 +82,9 @@ namespace WindowsFormsApp2
             // txt_password
             // 
             this.txt_password.Location = new System.Drawing.Point(74, 315);
+            this.txt_password.MaxLength = 22;
             this.txt_password.Name = "txt_password";
+            this.txt_password.PasswordChar = '*';
             this.txt_password.Size = new System.Drawing.Size(180, 20);
             this.txt_password.TabIndex = 5;
             // 
@@ -115,6 +117,7 @@ namespace WindowsFormsApp2
             this.label4.Size = new System.Drawing.Size(115, 13);
             this.label4.TabIndex = 7;
             this.label4.Text = " Forget password ?";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // Btn_login
             // 
@@ -141,8 +144,8 @@ namespace WindowsFormsApp2
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "MTR Route Suggestion App";
+            this.Text = "MTR Route Suggestion App";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
